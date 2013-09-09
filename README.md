@@ -1,15 +1,13 @@
-利用Trie-Tree实现敏感词屏蔽功能, C++独立模块.
+###利用Trie-Tree实现敏感词屏蔽功能.
 
-使用向导：
+####HOW TO USE:
 
-1. 敏感词库，当前只支持一行一个词汇的文本。
+1. 敏感词库，当前只支持一行一个词汇的文本文件作为屏蔽词库。
 
-2. 使用示例(见main.cc):
+2. 使用示例(见example.cc):
 
-    std::string aaa("大家好哈哈哈111");
-    
     WordShielder myShielder("words_example.dat");
     
-    myShielder.shield(aaa);
+    std::string source("大家好,HelloWorld");
     
-    std::cout << aaa << std::endl; // Out put: 大家好***111
+    myShielder.shield(source);
